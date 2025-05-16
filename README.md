@@ -1,4 +1,6 @@
-### SYNCHRONOUS-UP-COUNTER
+## Developed by: Shreedhar Kumar K.J
+## RegisterNumber: 212224230265
+# EXP:11 SYNCHRONOUS-UP-COUNTER
 
 **AIM:**
 
@@ -33,9 +35,6 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 **PROGRAM**
 ```
 Program for flipflops and verify its truth table in quartus using Verilog programming. 
-
-Developed by: Shreedhar Kumar K.J
-RegisterNumber: 212224230265
 ```
 ```VHDL
 module ex11(out,clk,rstn);
@@ -63,6 +62,6 @@ endmodule
 
 ![image](https://github.com/gauthamkrishna7/SYNCHRONOUS-UP-COUNTER/assets/141175025/1f42bc36-2284-404b-971e-1f7faf07c0fe)
 
-**RESULTS**
+**RESULTS:**
 
-Hence a 4 bit synchronous up counter is implemented correctly
+Thus,Hence a 4 bit synchronous up counter is implemented correctly
