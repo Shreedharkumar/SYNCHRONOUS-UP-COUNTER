@@ -1,6 +1,9 @@
-## Developed by: Shreedhar Kumar K.J
-## RegisterNumber: 212224230265
-# EXP:11 SYNCHRONOUS-UP-COUNTER
+**Name: SHREEDHAR KUMAR K.J**
+
+**REGISTER NO: 212224230265
+**
+
+# EX NO: 6 - SYNCHRONOUS UP COUNTER
 
 **AIM:**
 
@@ -28,40 +31,72 @@ Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and 
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
-**Procedure**
+**PROCEDURE**
 
-/* write all the steps invloved */
+### 1. Open Quartus Software
+Launch **Quartus Prime** on your system.
+
+### 2. Create a New Project
+- Navigate to **File > New Project Wizard**.
+- Set your **project directory**, **project name**, and **top-level entity name**.
+- Add your **Verilog (.v)** or **VHDL (.vhd)** source file.
+- Select the correct **FPGA device** based on your target board.
+
+### 3. Add Design Code
+- Open your top-level module (e.g., `main.v`).
+- Paste or write your Verilog/VHDL design.
+
+### 4. Compile the Design
+- Go to **Processing > Start Compilation**.
+- Wait until the compilation process is complete.
+- Resolve any errors or warnings if present.
+
+### 5. Generate RTL Schematic
+- Navigate to **Tools > Netlist Viewers > RTL Viewer**.
+- View the generated RTL schematic.
+- Save the schematic using **File > Export** (as image or PDF).
+
+### 6. Assign I/O Pins
+- Open **Assignments > Pin Planner**.
+- Assign FPGA pins to your module’s inputs and outputs.
+- Click **Save** once done.
+
+### 7. Create Waveform for Simulation
+- Go to **File > New > Other Files > Vector Waveform File (.vwf)**.
+- Click **Edit > Insert > Insert Node or Bus**.
+- Select all input and output signals to monitor.
+
+### 8. Set Simulation Parameters
+- Define end time using **Edit > End Time** (e.g., `1 us`).
+- Apply different **input combinations** on the waveform.
+
+### 9. Run Functional Simulation
+- Go to **Processing > Start Simulation**.
+- The **timing diagram** (simulation output) will be displayed.
+
+### 10. Save the Timing Diagram
+- Save the waveform for future reference.
+- Export the timing diagram image via **File > Export Image**.
+  
 
 **PROGRAM**
-```
-Program for flipflops and verify its truth table in quartus using Verilog programming. 
-```
-```VHDL
-module ex11(out,clk,rstn);
-input clk,rstn;
-output reg [3:0]out;
-always @ (posedge clk)
-begin
-   if(!rstn)
-     out<=0;
-   else 
-     out <= out+1;
-end
-endmodule
-```
+
+![Screenshot 2025-05-05 125703](https://github.com/user-attachments/assets/79f8029d-6c4c-4132-afd3-0a162c89baa1)
 
 **RTL LOGIC UP COUNTER**
 
-![image](https://github.com/gauthamkrishna7/SYNCHRONOUS-UP-COUNTER/assets/141175025/3fc75b05-1906-4744-8b66-a1245f6ef8dd)
+![Screenshot 2025-05-05 125711](https://github.com/user-attachments/assets/afc35340-80c8-4f2b-ab0f-8b1a798280ac)
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
-![image](https://github.com/gauthamkrishna7/SYNCHRONOUS-UP-COUNTER/assets/141175025/6958c1cc-55d0-45b0-ae98-f11cf7b425ad)
+![Screenshot 2025-05-05 125650](https://github.com/user-attachments/assets/1709605c-3d10-4b61-ae47-eef736e2dcb2)
+
 
 **TRUTH TABLE**
 
-![image](https://github.com/gauthamkrishna7/SYNCHRONOUS-UP-COUNTER/assets/141175025/1f42bc36-2284-404b-971e-1f7faf07c0fe)
+![Screenshot 2025-05-05 125938](https://github.com/user-attachments/assets/cc100817-c125-4d58-93bf-ce2a41c517f6)
 
-**RESULTS:**
 
-Thus,Hence a 4 bit synchronous up counter is implemented correctly
+**RESULTS**
+
+Thus the 4 bit synchronous up counter is implemented and its functionality is validated.
